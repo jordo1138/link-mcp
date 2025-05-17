@@ -1,4 +1,3 @@
-# link-mcp
 
 Link MCP is a Minimal Checkout Protocol (MCP) server that exposes only products purchasable through [Stripe Link](https://stripe.com/link). It is designed to be called by a language model, allowing users to view available items and complete a purchase with a single command.
 
@@ -8,18 +7,25 @@ Link MCP is a Minimal Checkout Protocol (MCP) server that exposes only products 
 - Supports commands like **"buy the xyz one"** to finalize a purchase
 - Uses a one-time authorization with Stripe Link for seamless checkout
 
+link-mcp
+
+This repository contains a simple Flask server that exposes product information
+from Stripe. The `/products/link` endpoint returns only products eligible for
+Stripe Link checkout. Eligibility is determined via the product's metadata
+field `link_eligible`.
+
 ## Setup
-1. Clone the repository
+
+1. Install dependencies:
    ```bash
-   git clone https://github.com/yourname/link-mcp.git
-   cd link-mcp
+   pip install -r requirements.txt
    ```
-2. Install dependencies (Node.js `>=18` or Python `>=3.9` depending on your implementation)
-3. Copy `.env.example` to `.env` and fill in your Stripe API keys
-4. Start the server
+2. Set the `STRIPE_API_KEY` environment variable with your Stripe secret key.
+3. Run the server:
    ```bash
-   npm start # or python main.py
+   python server.py
    ```
+
 
 ## Usage
 1. The LLM queries the MCP server to fetch products. Results are sorted by the criteria provided (for example, by price or delivery date).
@@ -35,3 +41,4 @@ We welcome contributions!
 
 ## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
