@@ -26,6 +26,14 @@ field `link_eligible`.
    python server.py
    ```
 
+## Testing
+
+After installing the dependencies, run the unit tests with:
+
+```bash
+python pytest.py
+```
+
 
 ## Usage
 1. The LLM queries the MCP server to fetch products. Results are sorted by the criteria provided (for example, by price or delivery date).
@@ -36,7 +44,7 @@ field `link_eligible`.
 We welcome contributions!
 1. Fork the repository and create a new branch for your feature or fix.
 2. Make your changes and add tests if applicable.
-3. Run `npm test` or `pytest` to ensure everything passes.
+3. Run `python pytest.py` to ensure everything passes.
 4. Submit a pull request describing your changes.
 
 ## License
