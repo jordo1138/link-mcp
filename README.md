@@ -1,5 +1,5 @@
 
-Link MCP is a Minimal Checkout Protocol (MCP) server that exposes only products purchasable through [Stripe Link](https://stripe.com/link). It is designed to be called by a language model, allowing users to view available items and complete a purchase with a single command.
+Link MCP is a Model Context Protocol (MCP) server that exposes only products purchasable through [Stripe Link](https://stripe.com/link). It is designed to be called by a language model, allowing users to view available items and complete a purchase with a single command. Product details are served from the JSON database located at `data/product_urls.json`. The server follows MCP principles so LLM agents can safely initiate purchases using structured endpoints.
 
 ## Features
 - Returns only Stripe Link enabled products
@@ -11,9 +11,9 @@ Link MCP is a Minimal Checkout Protocol (MCP) server that exposes only products 
 link-mcp
 
 This repository contains a simple Flask server that exposes product information
-from Stripe. The `/products/link` endpoint returns only products eligible for
-Stripe Link checkout. Eligibility is determined via the product's metadata
-field `link_eligible`.
+stored in a local JSON database. The `/products/link` endpoint returns only
+products eligible for Stripe Link checkout as indicated by each product's
+`link_eligible` metadata.
 
 ## Setup
 
@@ -22,6 +22,7 @@ field `link_eligible`.
    pip install -r requirements.txt
    ```
 2. Set the `STRIPE_API_KEY` environment variable with your Stripe secret key.
+   This is only required for creating checkout sessions.
 3. Run the server:
    ```bash
    python server.py
