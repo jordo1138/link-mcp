@@ -1,0 +1,20 @@
+[
+  {
+    "id": "prod_abc",
+    "name": "T-Shirt",
+    "url": "https://store.example.com/products/t-shirt",
+    "metadata": {"link_eligible": "true"}
+  },
+  {
+    "id": "prod_def",
+    "name": "Hat",
+    "url": "https://store.example.com/products/hat",
+    "metadata": {"link_eligible": "true"}
+  },
+  {
+    "id": "prod_ghi",
+    "name": "Socks",
+    "url": "https://store.example.com/products/socks",
+    "metadata": {"link_eligible": "true"}
+  }
+]
