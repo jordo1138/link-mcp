@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# Local development files
+.env
+.vscode/
+
+# Claude desktop configs
+claude-config.json
+claude-mcp.json
+stripe-echo.js
+stripe-mcp-proxy.js
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Cached data
+data/validated_sites.json
+data/checkout_links.json
