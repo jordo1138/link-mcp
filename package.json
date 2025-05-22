@@ -1,0 +1,13 @@
+{
+  "name": "stripe-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Stripe detection",
+  "main": "stripe-mcp-proxy.js",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "json-rpc-2.0": "^1.5.1"
+  },
+  "scripts": {
+    "start": "node stripe-mcp-proxy.js"
+  }
+}
